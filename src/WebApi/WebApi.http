@@ -1,0 +1,6 @@
+@SteelDonkey.WebApi_HostAddress = http://localhost:5186
+
+GET {{SteelDonkey.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
