@@ -1,3 +1,3 @@
 # SteelDonkey
 
-* Better than a wonky donkey? *
+*Better than a wonky donkey?*
