@@ -1,6 +1,6 @@
 ﻿using Ardalis.SmartEnum;
 
-namespace Core.Entities.Competency
+namespace SteelDonkey.Core.Entities.Competency
 {
     public sealed class CompetenceAssessmentOutcome : SmartEnum<CompetenceAssessmentOutcome>
     {

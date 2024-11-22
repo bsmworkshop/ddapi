@@ -1,7 +1,7 @@
 ﻿using Ardalis.Specification;
-using Core.Entities.Competency;
+using SteelDonkey.Core.Entities.Competency;
 
-namespace Core.Specifications
+namespace SteelDonkey.Core.Specifications
 {
     public class CompetenceElementSpecification : Specification<CompetenceElement>
     {

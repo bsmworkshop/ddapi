@@ -1,6 +1,7 @@
-﻿using Core.Interfaces;
+﻿using SteelDonkey.Core.Entities;
+using SteelDonkey.Core.Interfaces;
 
-namespace Core.Entities.Competency
+namespace SteelDonkey.Core.Entities.Competency
 {
     public class CompetenceElement : BaseEntity<int>, IAggregateRoot
     {

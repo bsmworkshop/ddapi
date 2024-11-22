@@ -1,7 +1,7 @@
 ﻿using Ardalis.Specification;
-using Core.Entities.People;
+using SteelDonkey.Core.Entities.People;
 
-namespace Core.Specifications
+namespace SteelDonkey.Core.Specifications
 {
     public class PersonSpecification : Specification<Person>
     {

@@ -1,6 +1,6 @@
-﻿using Core.Entities.Competency;
+﻿using SteelDonkey.Core.Entities.Competency;
 
-namespace Core.Interfaces
+namespace SteelDonkey.Core.Interfaces
 {
     public interface ICompetenceService
     {

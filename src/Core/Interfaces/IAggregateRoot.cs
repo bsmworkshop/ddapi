@@ -1,4 +1,4 @@
-﻿namespace Core.Interfaces
+﻿namespace SteelDonkey.Core.Interfaces
 {
     public interface IAggregateRoot
     {

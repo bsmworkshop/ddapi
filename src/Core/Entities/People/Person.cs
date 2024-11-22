@@ -1,7 +1,8 @@
-﻿using Core.Entities.Competency;
-using Core.Interfaces;
+﻿using SteelDonkey.Core.Entities;
+using SteelDonkey.Core.Entities.Competency;
+using SteelDonkey.Core.Interfaces;
 
-namespace Core.Entities.People
+namespace SteelDonkey.Core.Entities.People
 {
     public class Person : BaseEntity<int>, IAggregateRoot
     {

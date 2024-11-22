@@ -1,6 +1,6 @@
 ﻿using Ardalis.Specification;
 
-namespace Core.Interfaces
+namespace SteelDonkey.Core.Interfaces
 {
     public interface IRepository<T> : IRepositoryBase<T> where T : class, IAggregateRoot
     {

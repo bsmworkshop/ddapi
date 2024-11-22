@@ -1,14 +1,11 @@
-﻿using Core.Entities.Competency;
-using Core.Entities.People;
-using Core.Interfaces;
+﻿using Ardalis.GuardClauses;
 using Core.Specifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SteelDonkey.Core.Entities.Competency;
+using SteelDonkey.Core.Entities.People;
+using SteelDonkey.Core.Extensions;
+using SteelDonkey.Core.Interfaces;
 
-namespace Core.Services
+namespace SteelDonkey.Core.Services
 {
     public class CompetenceService : ICompetenceService
     {
@@ -27,10 +24,25 @@ namespace Core.Services
             var assessorPersonSpecification = new PersonWithCompetenceAssessmentsSpecification(assessorPersonId, competenceElementId);
             var assessorPerson = await _personRepository.FirstOrDefaultAsync(assessorPersonSpecification);
 
+            Guard.Against.Null(assessorPerson, nameof(assessorPerson));
+            var assessorAssessment = assessorPerson?.CompetenceAssessments.SingleOrDefault();
+            Guard.Against.AssessorIsNotQualified(assessorAssessment);
+
             var assessedPersonSpecification = new PersonSpecification(assessorPersonId);
             var assessedPerson = await _personRepository.FirstOrDefaultAsync(assessedPersonSpecification);
+            Guard.Against.Null(assessedPerson, nameof(assessedPerson));
 
-            
+            var competenceAssessment = new CompetenceAssessment(
+                assessorPersonId,
+                assessorPersonId,
+                competenceElementId,
+                outcome,
+                assessmentDate,
+                expiryDate,
+                notes);
+
+            await _competenceAssessmentRepository.AddAsync(competenceAssessment);
+
         }
     }
 }

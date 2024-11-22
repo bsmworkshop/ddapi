@@ -1,4 +1,4 @@
-﻿namespace Core.Entities.People
+﻿namespace SteelDonkey.Core.Entities.People
 {
     public class HumanName
     {
@@ -10,7 +10,7 @@
             FamilyName = familyName;
             GivenName = givenName;
         }
-        
+
         public HumanName(string familyName, string givenName, string otherNames)
         {
             FamilyName = familyName;

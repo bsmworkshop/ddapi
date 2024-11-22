@@ -1,4 +1,4 @@
-﻿namespace Core.Entities
+﻿namespace SteelDonkey.Core.Entities
 {
     public class BaseEntity<T> where T : struct
     {
