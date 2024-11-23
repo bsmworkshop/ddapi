@@ -1,6 +1,4 @@
-﻿using SteelDonkey.Core.Entities;
-using SteelDonkey.Core.Entities.Competency;
-using SteelDonkey.Core.Interfaces;
+﻿using SteelDonkey.Core.Interfaces;
 
 namespace SteelDonkey.Core.Entities.People
 {
@@ -9,7 +7,15 @@ namespace SteelDonkey.Core.Entities.People
 #pragma warning disable CS8618
         private Person() { }
 
-        public HumanName Name { get; private set; }
-        public List<CompetenceAssessment> CompetenceAssessments { get; private set; }
+        public Person(string familyName, string givenName, string? otherNames)
+        {
+            FamilyName = familyName;
+            GivenName = givenName;
+            OtherNames = otherNames;
+        }
+
+        public string FamilyName { get; private set; }
+        public string GivenName { get; private set; }
+        public string? OtherNames { get; private set; }
     }
 }
