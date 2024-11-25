@@ -1,13 +1,10 @@
-﻿using Ardalis.Specification.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using SteelDonkey.Core.Interfaces;
+﻿using Ardalis.SharedKernel;
+using Ardalis.Specification.EntityFrameworkCore;
 
 namespace Infrastructure.Data
 {
-    public class EfRepository<T> : RepositoryBase<T> where T : class, IAggregateRoot
+    public class EfRepository<T>(SteelDonkeyContext context) 
+        : RepositoryBase<T>(context), IReadRepository<T>, IRepository<T> where T : class, IAggregateRoot
     {
-        public EfRepository(DbContext dbContext) : base(dbContext)
-        {
-        }
     }
 }

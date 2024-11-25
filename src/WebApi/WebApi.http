@@ -1,6 +1,8 @@
-@SteelDonkey.WebApi_HostAddress = http://localhost:5186
+@host=https://localhost
+@port=7185
 
-GET {{SteelDonkey.WebApi_HostAddress}}/weatherforecast/
-Accept: application/json
+// Get a specific contributor
+@id_to_get=1
+GET {{host}}:{{port}}/People/{{id_to_get}}
 
 ###

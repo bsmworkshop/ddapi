@@ -1,14 +1,14 @@
-﻿using SteelDonkey.Core.Interfaces;
-
-namespace SteelDonkey.Core.Entities.People
+﻿namespace SteelDonkey.Core.Entities.People
 {
     public class Person : BaseEntity<int>, IAggregateRoot
     {
 #pragma warning disable CS8618
         private Person() { }
 
-        public Person(string familyName, string givenName, string? otherNames)
+        public Person(int createdById, string familyName, string givenName, string? otherNames)
         {
+            CreatedById = createdById;
+            CreatedAt = DateTime.UtcNow;
             FamilyName = familyName;
             GivenName = givenName;
             OtherNames = otherNames;

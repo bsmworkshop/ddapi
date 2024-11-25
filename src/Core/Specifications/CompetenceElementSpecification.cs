@@ -1,5 +1,5 @@
 ﻿using Ardalis.Specification;
-using SteelDonkey.Core.Entities.Competency;
+using SteelDonkey.Core.Entities.CompetencyElements;
 
 namespace SteelDonkey.Core.Specifications
 {

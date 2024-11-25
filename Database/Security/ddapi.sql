@@ -1,0 +1,1 @@
+﻿CREATE LOGIN [ddapi] WITH PASSWORD = 'EYWkXBnTNfFzQw9yDs38ZrpAxu75RGMVcUjLtba24SdvemqC'
